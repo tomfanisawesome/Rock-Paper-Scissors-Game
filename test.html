@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+   function computerPlay(){
+    let playArray=['rocks','papers','scissors'];
+    let randomNum=Math.floor(Math.random()*playArray.length); 
+    return randomNum;
+   }
+   function playerPlay(){
+     let message=prompt("What's your play? ");
+     return message;
+   }
+   function play(){
+     let playerSelection=playerPlay();
+     let computerSelection=computerPlay();
+     if (playerSelection==computerSelection){
+        alert("it's a draw")
+     }else if (playerSelection=='rock'&& computerSelection=='paper' ){
+        alert("waahahha,you lost")
+     }else if (playerSelection=='rock'&& computerSelection=='scissors' ){
+        alert("waahahha,you won")
+     }else if (playerSelection=='scissors'&& computerSelection=='paper' ){
+        alert("waahahha,you won")
+     }else if (playerSelection=='scissors'&& computerSelection=='rocks' ){
+        alert("waahahha,you lost")
+     }else if (playerSelection=='paper'&& computerSelection=='rocks' ){
+        alert("waahahha,you won")
+     }else if (playerSelection=='paper'&& computerSelection=='scissors' ){
+        alert("waahahha,you lost")
+   }
+   
+  </script>
+</body>
+</html>
